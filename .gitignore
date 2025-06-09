@@ -1,0 +1,193 @@
+###############################################################################
+#  GLOBAL – OS & editor cruft
+###############################################################################
+# macOS / Windows / Linux
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*~
+
+# IDEs / editors (add or remove as needed)
+.vscode/
+.idea/
+*.code-workspace
+
+###############################################################################
+#  PYTHON
+###############################################################################
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual-envs & Conda envs
+.env/
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+.conda/
+
+# Build & packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Testing & coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage*
+coverage.xml
+htmlcov/
+
+# Jupyter / Spyder
+.ipynb_checkpoints/
+.spyderproject
+.spyproject
+
+###############################################################################
+#  POWER BI
+###############################################################################
+# Note – keep templates (`*.pbit`) only if you *really* need them in Git.
+# Most teams version the PBIX *source* (scripts, params) and store the binaries elsewhere.
+
+# Power BI report files (binary, large)
+*.pbix
+*.pbit
+*.pbids          # data-source definitions
+
+# Auto-save & temporary
+~$*.pbix
+TempPIDebugLogFiles/
+*.pbiik
+
+# Power Query mashup & model caches
+*.DataMashup
+*.DataModelSchema
+*.agg            # aggregation cache files
+
+# Tabular Editor / model artifacts (adjust per workflow)
+# *.bim
+# *.json
+
+###############################################################################
+#  LOGS & MISC
+###############################################################################
+*.log
+logs/
+*.tmp
+*.bak
+*.old
+*.orig
+
+# VSCode launch/debug, PyCharm, etc. (uncomment if you don’t commit them)
+# .vscode/launch.json
+# .vscode/settings.json
+
+###############################################################################
+#  GLOBAL – OS & editor cruft
+###############################################################################
+# macOS / Windows / Linux
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*~
+
+# IDEs / editors (add or remove as needed)
+.vscode/
+.idea/
+*.code-workspace
+
+###############################################################################
+#  PYTHON
+###############################################################################
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual-envs & Conda envs
+.env/
+.venv/
+venv/
+env/
+ENV/
+conda-env/
+.conda/
+
+# Build & packaging
+build/
+dist/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Testing & coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage*
+coverage.xml
+htmlcov/
+
+# Jupyter / Spyder
+.ipynb_checkpoints/
+.spyderproject
+.spyproject
+
+###############################################################################
+#  POWER BI
+###############################################################################
+# Note – keep templates (`*.pbit`) only if you *really* need them in Git.
+# Most teams version the PBIX *source* (scripts, params) and store the binaries elsewhere.
+
+# Power BI report files (binary, large)
+*.pbix
+*.pbit
+*.pbids          # data-source definitions
+
+# Auto-save & temporary
+~$*.pbix
+TempPIDebugLogFiles/
+*.pbiik
+
+# Power Query mashup & model caches
+*.DataMashup
+*.DataModelSchema
+*.agg            # aggregation cache files
+
+# Tabular Editor / model artifacts (adjust per workflow)
+# *.bim
+# *.json
+
+###############################################################################
+#  LOGS & MISC
+###############################################################################
+*.log
+logs/
+*.tmp
+*.bak
+*.old
+*.orig
+
+# VSCode launch/debug, PyCharm, etc. (uncomment if you don’t commit them)
+# .vscode/launch.json
+# .vscode/settings.json
+
+###############################################################################
+#  REPO FOLDERS
+###############################################################################
+data/bcb/*
+data/usdt/*
+
+###############################################################################
+#  END
+###############################################################################
