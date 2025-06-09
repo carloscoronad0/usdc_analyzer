@@ -1,0 +1,39 @@
+relationship 6b80ebe5-de9b-4fb2-b716-91c682cf0b1d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendar.Date
+	toColumn: LocalDateTable_446f9230-5d24-4b82-9da3-41edb1ff396a.Date
+
+relationship 6d535819-a303-437d-9a05-89018edc8c47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendar.'Start of year'
+	toColumn: LocalDateTable_d00ca0d3-8ef4-4ec4-99e7-00194def45c7.Date
+
+relationship d83e0ff1-4fe4-4a36-bad6-b06323a15740
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendar.'End of year'
+	toColumn: LocalDateTable_a633a5d0-81f4-46e9-9418-df5ee7f634a1.Date
+
+relationship e2aaabf4-404d-44ac-bd9f-6a790bd2b55a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: calendar.'Start of week'
+	toColumn: LocalDateTable_f3c53213-6751-4d96-bec9-b105d1d39da0.Date
+
+relationship AutoDetected_4e67c704-f01e-465d-84f9-7229cf8eeb53
+	fromColumn: daily_usdt_exchange_rate.YYYYMM
+	toColumn: official_price_history.YYYYMM
+
+relationship AutoDetected_8d58af3c-aef5-4fc2-89c0-dc8b24a0f29c
+	fromColumn: calendar.YYYYMM
+	toColumn: official_price_history.YYYYMM
+
+relationship AutoDetected_10af6d7a-f46c-47f1-b62c-59de63ef46c9
+	fromColumn: daily_usdt_exchange_rate.YYYYMM
+	toColumn: monthly_usdt_exchange_rate.YYYYMM
+
+relationship AutoDetected_d62732db-478d-4b31-bae7-cf156449463d
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: daily_usdt_exchange_rate.YYYYMMDD
+	toColumn: calendar.YYYYMMDD
+

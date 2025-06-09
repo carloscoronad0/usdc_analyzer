@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "usdt_analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a68f0121-c2ae-43dd-b08c-f7b30f2ca723"
+  }
+}

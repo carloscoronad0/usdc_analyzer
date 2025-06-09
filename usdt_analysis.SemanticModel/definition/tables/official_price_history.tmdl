@@ -1,0 +1,44 @@
+table official_price_history
+	lineageTag: a782a245-bea3-4fda-8acb-f4953d572543
+
+	column YYYYMM
+		dataType: int64
+		formatString: 0
+		lineageTag: 598f5582-5a28-4211-8a22-b33ee19d267a
+		summarizeBy: none
+		sourceColumn: YYYYMM
+
+		annotation SummarizationSetBy = Automatic
+
+	column prices
+		dataType: double
+		lineageTag: 40d9a134-f5bd-49ae-8edb-43549c41487f
+		summarizeBy: sum
+		sourceColumn: prices
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition official_price_history = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("Z:\Code\07_usdc_analyzer\data\clean_dolar_bob_price_history.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Replaced Value" = Table.ReplaceValue(#"Promoted Headers",",",".",Replacer.ReplaceText,{"32"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"32", type number}, {"YEAR", Int64.Type}, {"index", type text}}),
+				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"index"}, aux_month_numbers, {"month"}, "Aux_MonthNumbers", JoinKind.LeftOuter),
+				    #"Expanded Aux_MonthNumbers" = Table.ExpandTableColumn(#"Merged Queries", "Aux_MonthNumbers", {"index"}, {"Aux_MonthNumbers.index"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded Aux_MonthNumbers", "YYYYMM", each Number.ToText([YEAR]) & [Aux_MonthNumbers.index]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"YYYYMM", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"32", "prices"}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"YYYYMM", "prices"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

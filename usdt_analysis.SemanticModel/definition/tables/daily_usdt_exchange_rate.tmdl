@@ -1,0 +1,49 @@
+table daily_usdt_exchange_rate
+	lineageTag: 6155addb-0b3b-4ef6-9708-22fe2887907b
+
+	column YYYYMMDD
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e6f30b5-5db2-4d61-ade1-e7d1417e9630
+		summarizeBy: sum
+		sourceColumn: YYYYMMDD
+
+		annotation SummarizationSetBy = Automatic
+
+	column YYYYMM
+		dataType: int64
+		formatString: 0
+		lineageTag: feb594e3-26cb-4e0d-9c77-6b0334259380
+		summarizeBy: none
+		sourceColumn: YYYYMM
+
+		annotation SummarizationSetBy = Automatic
+
+	column prices
+		dataType: double
+		lineageTag: aefff091-67b6-43a1-8fe4-69042aaffc67
+		summarizeBy: sum
+		sourceColumn: prices
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition daily_usdt_exchange_rate = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("Z:\Code\07_usdc_analyzer\data\clean_usdt_bob_daily_price_history.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"dates", type datetime}, {"prices", type number}, {"YYYYMM", Int64.Type}}),
+				    #"Added Custom" = Table.AddColumn(#"Changed Type", "YYYYMMDD", each DateTime.ToText([dates], [Format="yyyyMMdd"])),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"YYYYMMDD", Int64.Type}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type1",{"YYYYMMDD", "YYYYMM", "prices"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
