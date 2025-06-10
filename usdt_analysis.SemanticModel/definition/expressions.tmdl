@@ -1,0 +1,96 @@
+expression aux_month_numbers =
+		let
+		    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("Rc5NDsIgEIbhu8y6i6LW1mWLo8HwYyiYVNL7X6PwQXT5vDOESYnYsnfUUS9o7xI9ePEtnBDM7L/gGZwXr3ThpU03DAfoFa0Cr426cqxPn24N8ASv/A6KTf6vtBuakyHWIHoE6z6/HVFPvCv5T/nI/QA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [month = _t, index = _t])
+		in
+		    Source
+	lineageTag: 0629b02b-0fe2-4a4d-875b-3e52389664f8
+	queryGroup: aux_tables
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression llm_analysis = ```
+		let
+		    Source = Excel.Workbook(File.Contents("Z:\Code\07_usdc_analyzer\data\llm_analysis.xlsx"), null, true),
+		    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+		    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"title", type text}, {"res", type text}}),
+		    #"Parsed JSON" = Table.TransformColumns(#"Changed Type",{{"res", Json.Document}}),
+		    #"Expanded res" = Table.ExpandRecordColumn(#"Parsed JSON", "res", {"entidades", "partidos_politicos", "temas", "impacto_dolar", "impacto_economia", "impacto_politico"}, {"res.entidades", "res.partidos_politicos", "res.temas", "res.impacto_dolar", "res.impacto_economia", "res.impacto_politico"}),
+		    #"Extracted entidades" = Table.TransformColumns(#"Expanded res", {"res.entidades", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		
+		    #"Parse partidos_politicos" = Table.TransformColumns(
+		      #"Extracted entidades",
+		      {{"res.partidos_politicos",
+		        each if Value.Is(_, type list) then _ else {_},     // wrap scalar in a list
+		        type list}}
+		    ),
+		    #"Extracted partidos_politicos" = Table.TransformColumns(#"Extracted entidades", {"res.partidos_politicos", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		
+		    #"Parse temas" = Table.TransformColumns(
+		      #"Extracted partidos_politicos",
+		      {{"res.temas",
+		        each if Value.Is(_, type list) then _ else {_},     // wrap scalar in a list
+		        type list}}
+		    ),
+		    #"Extracted temas" = Table.TransformColumns(#"Extracted partidos_politicos", {"res.temas", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		    
+		    #"Parse impato_dolar" = Table.TransformColumns(
+		      #"Extracted temas",
+		      {{"res.impacto_dolar",
+		        each if Value.Is(_, type list) then _ else {_},     // wrap scalar in a list
+		        type list}}
+		    ),
+		    #"Extracted impacto_dolar" = Table.TransformColumns(#"Parse impato_dolar", {"res.impacto_dolar", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		    #"Parse impacto_economico" = Table.TransformColumns(
+		      #"Extracted impacto_dolar",
+		      {{"res.impacto_economia",
+		        each if Value.Is(_, type list) then _ else {_},     // wrap scalar in a list
+		        type list}}
+		    ),
+		    #"Extracted impacto_economico" = Table.TransformColumns(#"Parse impacto_economico", {"res.impacto_economia", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		    #"Parse impacto_politico" = Table.TransformColumns(
+		      #"Extracted impacto_economico",
+		      {{"res.impacto_politico",
+		        each if Value.Is(_, type list) then _ else {_},     // wrap scalar in a list
+		        type list}}
+		    ),
+		    #"Extracted impacto_politico" = Table.TransformColumns(#"Parse impacto_politico", {"res.impacto_politico", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Extracted impacto_politico", {"res.partidos_politicos"})
+		in
+		    #"Removed Errors"
+		```
+	lineageTag: d51fb00c-e579-4e0c-8636-b322e9e93ac2
+	queryGroup: aux_tables
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
+expression text_cleaning = ```
+		let
+		    stopWords =                   // ← lista de conectores / “stop-words”
+		        {"y","o","u","e","ni","que","pero","sino","aunque","si","porque",
+		         "para","por","con","sin","a","al","del","de","en","entre","sobre",
+		         "el","la","los","las","un","una","unos","unas","lo","le","les",
+		         "su","sus","mi","mis","tu","tus"},
+		    
+		    limpiar =                      // función reutilizable
+		        (txt as nullable text) as text =>
+		            let
+		                palabras   = Text.Split(Text.Lower(Text.Remove(txt,{"?",".",",",";","¡","!","¿",":","\"}))," "),
+		                filtradas  = List.Select(palabras,
+		                                each _ <> "" and not List.Contains(stopWords, _)),
+		                salida     = Text.Combine(filtradas," ")
+		            in  salida
+		in
+		    limpiar
+		```
+	lineageTag: efaac114-4184-4fab-b4ff-2bd4fa6315e5
+	queryGroup: aux_tables
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+

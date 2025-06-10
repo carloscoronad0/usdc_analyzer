@@ -13,7 +13,7 @@ table official_price_history
 	column prices
 		dataType: double
 		lineageTag: 40d9a134-f5bd-49ae-8edb-43549c41487f
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: prices
 
 		annotation SummarizationSetBy = Automatic

@@ -5,7 +5,7 @@ table daily_usdt_exchange_rate
 		dataType: int64
 		formatString: 0
 		lineageTag: 5e6f30b5-5db2-4d61-ade1-e7d1417e9630
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: YYYYMMDD
 
 		annotation SummarizationSetBy = Automatic
@@ -14,7 +14,7 @@ table daily_usdt_exchange_rate
 		dataType: int64
 		formatString: 0
 		lineageTag: feb594e3-26cb-4e0d-9c77-6b0334259380
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: YYYYMM
 
 		annotation SummarizationSetBy = Automatic

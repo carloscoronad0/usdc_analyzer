@@ -91,6 +91,9 @@ table calendar
 		lineageTag: 43ef1344-ef5c-4581-b871-29db81c31b8b
 		summarizeBy: none
 		sourceColumn: Month name
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -135,6 +138,9 @@ table calendar
 		lineageTag: 211abaf5-e2b7-44ff-be27-3c38548e0b3d
 		summarizeBy: none
 		sourceColumn: Day name
+		sortByColumn: 'Day of week'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -162,7 +168,7 @@ table calendar
 		dataType: int64
 		formatString: 0
 		lineageTag: 64f5611e-85b9-462a-b553-5afa73339310
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: YYYYMMDD
 
 		annotation SummarizationSetBy = Automatic

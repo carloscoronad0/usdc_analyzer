@@ -18,22 +18,28 @@ relationship e2aaabf4-404d-44ac-bd9f-6a790bd2b55a
 	fromColumn: calendar.'Start of week'
 	toColumn: LocalDateTable_f3c53213-6751-4d96-bec9-b105d1d39da0.Date
 
-relationship AutoDetected_4e67c704-f01e-465d-84f9-7229cf8eeb53
-	fromColumn: daily_usdt_exchange_rate.YYYYMM
-	toColumn: official_price_history.YYYYMM
-
 relationship AutoDetected_8d58af3c-aef5-4fc2-89c0-dc8b24a0f29c
+	crossFilteringBehavior: bothDirections
 	fromColumn: calendar.YYYYMM
 	toColumn: official_price_history.YYYYMM
 
-relationship AutoDetected_10af6d7a-f46c-47f1-b62c-59de63ef46c9
-	fromColumn: daily_usdt_exchange_rate.YYYYMM
+relationship b89b7181-604b-c164-645e-fd9fb68f80e9
+	crossFilteringBehavior: bothDirections
+	fromColumn: calendar.YYYYMM
 	toColumn: monthly_usdt_exchange_rate.YYYYMM
 
-relationship AutoDetected_d62732db-478d-4b31-bae7-cf156449463d
-	isActive: false
+relationship 62b601c8-42be-0689-908b-5bd120daee5c
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
-	fromColumn: daily_usdt_exchange_rate.YYYYMMDD
+	fromColumn: calendar.YYYYMMDD
+	toColumn: daily_usdt_exchange_rate.YYYYMMDD
+
+relationship f0b20dde-d10a-4fae-bdfa-e2af49b505af
+	joinOnDateBehavior: datePartOnly
+	fromColumn: related_news.date
+	toColumn: LocalDateTable_a990e72e-f3fb-40de-b912-6ea7d3f953d6.Date
+
+relationship AutoDetected_a8491550-9cf1-43dc-a298-d676bebd71fc
+	fromColumn: related_news.YYYYMMDD
 	toColumn: calendar.YYYYMMDD
 

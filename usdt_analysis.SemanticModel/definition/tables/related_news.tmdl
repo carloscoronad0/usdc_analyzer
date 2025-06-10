@@ -1,0 +1,150 @@
+table related_news
+	lineageTag: 57bfad4f-852e-4afa-9df6-5843a69b056a
+
+	column title
+		dataType: string
+		lineageTag: f716aef2-9d79-447a-803c-fd0b23132c85
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dfffd5a7-6292-4052-96e8-7fb02c532fb4
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: f0b20dde-d10a-4fae-bdfa-e2af49b505af
+			defaultHierarchy: LocalDateTable_a990e72e-f3fb-40de-b912-6ea7d3f953d6.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column link
+		dataType: string
+		lineageTag: e2e5d5a4-361c-4e3a-8550-72183275b1cd
+		summarizeBy: none
+		sourceColumn: link
+
+		annotation SummarizationSetBy = Automatic
+
+	column provider
+		dataType: string
+		lineageTag: 51a262c7-d360-4b4f-9424-02ea536f063f
+		summarizeBy: none
+		sourceColumn: provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.title'
+		dataType: string
+		lineageTag: dcd9e011-fc50-479e-928d-e99a6af05c94
+		summarizeBy: none
+		sourceColumn: llm_analysis.title
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.entidades'
+		dataType: string
+		lineageTag: e5f64390-db9c-4345-918f-256e263806bd
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.entidades
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.partidos_politicos'
+		dataType: string
+		lineageTag: 32d0d8c1-c229-4e74-9a3d-151815588eef
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.partidos_politicos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.temas'
+		dataType: string
+		lineageTag: 7b799a24-dedd-4005-865f-58638364392c
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.temas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.impacto_dolar'
+		dataType: string
+		lineageTag: 474d1edf-5a9b-46b0-b4bf-ddee37b48475
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.impacto_dolar
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.impacto_economia'
+		dataType: string
+		lineageTag: 9165f568-70a0-4031-bdef-9465aa668fa9
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.impacto_economia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'llm_analysis.res.impacto_politico'
+		dataType: string
+		lineageTag: dfbbed89-cb8c-46be-95ae-b18c1034c8ee
+		summarizeBy: none
+		sourceColumn: llm_analysis.res.impacto_politico
+
+		annotation SummarizationSetBy = Automatic
+
+	column YYYYMMDD
+		dataType: int64
+		formatString: 0
+		lineageTag: ff2f8721-e7a5-4c9d-a6e8-64f030cf3466
+		summarizeBy: none
+		sourceColumn: YYYYMMDD
+
+		annotation SummarizationSetBy = Automatic
+
+	column analyzed_by_llm
+		dataType: string
+		lineageTag: b7235d30-9fa2-4786-8951-1ed497bf6408
+		summarizeBy: none
+		sourceColumn: analyzed_by_llm
+
+		annotation SummarizationSetBy = Automatic
+
+	column clean_title
+		dataType: string
+		lineageTag: 4fa18ea1-f64e-410d-9c0b-238acbfe11a6
+		summarizeBy: none
+		sourceColumn: clean_title
+
+		annotation SummarizationSetBy = Automatic
+
+	partition related_news = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("Z:\Code\07_usdc_analyzer\data\all_news.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"title", type text}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"date", type date}}, "es-419"),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type with Locale",{{"link", type text}, {"provider", type text}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Changed Type1", each [title] <> null and [title] <> ""),
+				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"title"}, llm_analysis, {"title"}, "llm_analysis", JoinKind.LeftOuter),
+				    #"Expanded llm_analysis" = Table.ExpandTableColumn(#"Merged Queries", "llm_analysis", {"title", "res.entidades", "res.partidos_politicos", "res.temas", "res.impacto_dolar", "res.impacto_economia", "res.impacto_politico"}, {"llm_analysis.title", "llm_analysis.res.entidades", "llm_analysis.res.partidos_politicos", "llm_analysis.res.temas", "llm_analysis.res.impacto_dolar", "llm_analysis.res.impacto_economia", "llm_analysis.res.impacto_politico"}),
+				    #"Added Custom" = Table.AddColumn(#"Expanded llm_analysis", "YYYYMMDD", each Date.ToText([date], [Format="yyyyMMdd"])),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"YYYYMMDD", Int64.Type}}),
+				    #"Added Custom1" = Table.AddColumn(#"Changed Type2", "analyzed_by_llm", each if [llm_analysis.title] <> "" and [llm_analysis.title] <> null then "SI" else "NO"),
+				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom1",{{"analyzed_by_llm", type text}}),
+				    #"Invoked Custom Function" = Table.AddColumn(#"Changed Type3", "clean_title", each text_cleaning([title])),
+				    #"Changed Type4" = Table.TransformColumnTypes(#"Invoked Custom Function",{{"clean_title", type text}})
+				in
+				    #"Changed Type4"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

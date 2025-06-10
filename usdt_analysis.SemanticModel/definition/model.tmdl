@@ -10,7 +10,7 @@ queryGroup aux_tables
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["official_price_history","daily_usdt_exchange_rate","monthly_usdt_exchange_rate","aux_month_numbers","calendar","metrics"]
+annotation PBI_QueryOrder = ["official_price_history","daily_usdt_exchange_rate","monthly_usdt_exchange_rate","aux_month_numbers","llm_analysis","text_cleaning","calendar","related_news","metrics"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -21,7 +21,6 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table official_price_history
 ref table daily_usdt_exchange_rate
 ref table monthly_usdt_exchange_rate
-ref table aux_month_numbers
 ref table calendar
 ref table DateTableTemplate_926adfe8-2041-4606-8f71-272aeaa7fafe
 ref table LocalDateTable_446f9230-5d24-4b82-9da3-41edb1ff396a
@@ -29,6 +28,8 @@ ref table LocalDateTable_d00ca0d3-8ef4-4ec4-99e7-00194def45c7
 ref table LocalDateTable_a633a5d0-81f4-46e9-9418-df5ee7f634a1
 ref table LocalDateTable_f3c53213-6751-4d96-bec9-b105d1d39da0
 ref table metrics
+ref table related_news
+ref table LocalDateTable_a990e72e-f3fb-40de-b912-6ea7d3f953d6
 
 ref cultureInfo en-US
 
