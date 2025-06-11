@@ -31,12 +31,12 @@ table official_price_history
 				    #"Changed Type" = Table.TransformColumnTypes(#"Replaced Value",{{"32", type number}, {"YEAR", Int64.Type}, {"index", type text}}),
 				    #"Merged Queries" = Table.NestedJoin(#"Changed Type", {"index"}, aux_month_numbers, {"month"}, "Aux_MonthNumbers", JoinKind.LeftOuter),
 				    #"Expanded Aux_MonthNumbers" = Table.ExpandTableColumn(#"Merged Queries", "Aux_MonthNumbers", {"index"}, {"Aux_MonthNumbers.index"}),
-				    #"Added Custom" = Table.AddColumn(#"Expanded Aux_MonthNumbers", "YYYYMM", each Number.ToText([YEAR]) & [Aux_MonthNumbers.index]),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"YYYYMM", Int64.Type}}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type1",{{"32", "prices"}}),
-				    #"Removed Other Columns" = Table.SelectColumns(#"Renamed Columns",{"YYYYMM", "prices"})
+				    #"Added YYYYMM" = Table.AddColumn(#"Expanded Aux_MonthNumbers", "YYYYMM", each Number.ToText([YEAR]) & [Aux_MonthNumbers.index]),
+				    #"Changed Type to Whole" = Table.TransformColumnTypes(#"Added YYYYMM",{{"YYYYMM", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type to Whole",{{"32", "prices"}}),
+				    #"Removed Unused Columns" = Table.SelectColumns(#"Renamed Columns",{"YYYYMM", "prices"})
 				in
-				    #"Removed Other Columns"
+				    #"Removed Unused Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

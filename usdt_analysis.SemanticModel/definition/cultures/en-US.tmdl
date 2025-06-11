@@ -541,260 +541,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "monthly_usdt_exchange_rate": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "monthly_usdt_exchange_rate"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "monthly usdt exchange rate": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "monthly_usdt_exchange_rate": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "monthly usdt exchange degree": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "monthly usdt exchange frequency": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "monthly usdt exchange percentage": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "monthly usdt exchange ratio": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "monthly usdt exchange quotient": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "monthly usdt exchange amount": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "monthly usdt exchange proportion": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "monthly usdt exchange speed": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "monthly usdt exchange level": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "monthly usdt exchange scale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        }
-			      ]
-			    },
-			    "monthly_usdt_exchange_rate.yyyymm": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "monthly_usdt_exchange_rate",
-			          "ConceptualProperty": "YYYYMM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "yyyymm": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "monthly_usdt_exchange_rate.price": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "monthly_usdt_exchange_rate",
-			          "ConceptualProperty": "prices"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "price": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "worth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "fee": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "charge": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "bill": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "rate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "expense": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "cost": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "outlay": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "penalty": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        }
-			      ]
-			    },
 			    "calendar": {
 			      "Definition": {
 			        "Binding": {
@@ -3578,19 +3324,16 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "metrics": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "metrics name": {
-			            "State": "Generated"
-			          }
 			        }
-			      ],
-			      "NameType": "Name"
+			      ]
 			    },
 			    "related_news": {
 			      "Definition": {
@@ -4444,6 +4187,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Partidos Politicos Mencionados": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4543,6 +4296,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Impacto Economico": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4620,9 +4383,935 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "related_news.clean_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "related_news",
+			          "ConceptualProperty": "clean_title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clean title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clean_title": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "clean designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "clean name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "clean award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "clean call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "clean heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "clean label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Nube de Palabras": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.top_y_news_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "TOP_Y_NEWS_COUNT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top y news count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TOP_Y_NEWS_COUNT": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "news count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "y news count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "top y news amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "y news amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "news amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "best y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper y news count": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.price_on_initial_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "PRICE_ON_INITIAL_DATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price on initial date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRICE_ON_INITIAL_DATE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "price on initial moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "price on initial period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "value on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "worth on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "fee on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "charge on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "amount on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "bill on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "rate on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "expense on initial date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Precio Inicial": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.price_on_final_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "PRICE_ON_FINAL_DATE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price on final date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRICE_ON_FINAL_DATE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "price on final moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "price on final period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "value on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "worth on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "fee on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "charge on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "amount on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "bill on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "rate on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "expense on final date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Precio Final": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.price_spread": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "PRICE_SPREAD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price spread": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRICE_SPREAD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "spread": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price blowout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price meal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price supper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "blowout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "supper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "price feast": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "price banquet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "price binge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "feast": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.price_spread_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "PRICE_SPREAD_COLOR"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price spread color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRICE_SPREAD_COLOR": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "spread color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price spread hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "spread hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "price spread tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "price spread shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "price spread dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "price spread paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "price spread pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "spread tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "spread shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.price_spread_format": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "metrics",
+			          "ConceptualProperty": "PRICE_SPREAD_FORMAT"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "price spread format": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PRICE_SPREAD_FORMAT": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "format": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "spread format": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price spread arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "price spread setup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "price spread presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "price spread organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "price spread layout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "price spread system": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "spread arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "spread setup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "spread presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "spread organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Spread Porcentual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "calendar_start_of_week_date_hierarchy_has_calendar_start_of_week_day": {
+			      "Binding": {
+			        "ConceptualEntity": "calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar.start_of_week.date_hierarchy": {
+			          "Target": {
+			            "Entity": "calendar.start_of_week.date_hierarchy"
+			          }
+			        },
+			        "calendar.start_of_week.day": {
+			          "Target": {
+			            "Entity": "calendar.start_of_week.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar.start_of_week.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "calendar.start_of_week.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "start_of_week_date_hierarchy_have_start_of_week_day"
+			        }
+			      ]
+			    },
 			    "calendar_start_of_week_date_hierarchy_has_calendar_start_of_week_month": {
 			      "Binding": {
 			        "ConceptualEntity": "calendar"
@@ -5454,6 +6143,237 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "metrics_has_price_spread_format": {
+			      "Binding": {
+			        "ConceptualEntity": "metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.price_spread_format": {
+			          "Target": {
+			            "Entity": "metrics.price_spread_format"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.price_spread_format"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_price_spread_format"
+			        }
+			      ]
+			    },
+			    "metrics_has_price_spread_color": {
+			      "Binding": {
+			        "ConceptualEntity": "metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.price_spread_color": {
+			          "Target": {
+			            "Entity": "metrics.price_spread_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.price_spread_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_price_spread_color"
+			        }
+			      ]
+			    },
+			    "daily_usdt_exchange_rate_has_metrics_price_spread": {
+			      "Binding": {
+			        "ConceptualEntity": "daily_usdt_exchange_rate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "daily_usdt_exchange_rate": {
+			          "Target": {
+			            "Entity": "daily_usdt_exchange_rate"
+			          }
+			        },
+			        "metrics.price_spread": {
+			          "Target": {
+			            "Entity": "metrics.price_spread"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "daily_usdt_exchange_rate"
+			            },
+			            "Object": {
+			              "Role": "metrics.price_spread"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "daily_usdt_exchange_rates_have_price_spread"
+			        }
+			      ]
+			    },
+			    "daily_usdt_exchange_rate_has_metrics_price_on_final_date": {
+			      "Binding": {
+			        "ConceptualEntity": "daily_usdt_exchange_rate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "daily_usdt_exchange_rate": {
+			          "Target": {
+			            "Entity": "daily_usdt_exchange_rate"
+			          }
+			        },
+			        "metrics.price_on_final_date": {
+			          "Target": {
+			            "Entity": "metrics.price_on_final_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "daily_usdt_exchange_rate"
+			            },
+			            "Object": {
+			              "Role": "metrics.price_on_final_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "daily_usdt_exchange_rates_have_price_on_final_date"
+			        }
+			      ]
+			    },
+			    "daily_usdt_exchange_rate_has_metrics_price_on_initial_date": {
+			      "Binding": {
+			        "ConceptualEntity": "daily_usdt_exchange_rate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "daily_usdt_exchange_rate": {
+			          "Target": {
+			            "Entity": "daily_usdt_exchange_rate"
+			          }
+			        },
+			        "metrics.price_on_initial_date": {
+			          "Target": {
+			            "Entity": "metrics.price_on_initial_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "daily_usdt_exchange_rate"
+			            },
+			            "Object": {
+			              "Role": "metrics.price_on_initial_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "daily_usdt_exchange_rates_have_price_on_initial_date"
+			        }
+			      ]
+			    },
+			    "metrics_has_top_y_news_count": {
+			      "Binding": {
+			        "ConceptualEntity": "metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.top_y_news_count": {
+			          "Target": {
+			            "Entity": "metrics.top_y_news_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.top_y_news_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_top_y_news_count"
+			        }
+			      ]
+			    },
+			    "related_news_has_clean_title": {
+			      "Binding": {
+			        "ConceptualEntity": "related_news"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "related_news": {
+			          "Target": {
+			            "Entity": "related_news"
+			          }
+			        },
+			        "related_news.clean_title": {
+			          "Target": {
+			            "Entity": "related_news.clean_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "related_news"
+			            },
+			            "Object": {
+			              "Role": "related_news.clean_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "related_news_have_clean_titles"
+			        }
+			      ]
+			    },
 			    "related_news_has_analyzed_by_llm": {
 			      "Binding": {
 			        "ConceptualEntity": "related_news"
@@ -5900,52 +6820,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "related_news_have_titles"
-			        }
-			      ]
-			    },
-			    "metrics_has_metrics": {
-			      "Binding": {
-			        "ConceptualEntity": "metrics"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "metrics": {
-			          "Target": {
-			            "Entity": "metrics"
-			          }
-			        },
-			        "metrics.metrics": {
-			          "Target": {
-			            "Entity": "metrics.metrics"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "metrics"
-			            },
-			            "Object": {
-			              "Role": "metrics.metrics"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "metrics_have_metrics"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "metrics"
-			            },
-			            "Name": {
-			              "Role": "metrics.metrics"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "metrics_are_names_IDs_of_metrics"
 			        }
 			      ]
 			    },
@@ -6543,99 +7417,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "monthly_usdt_exchange_rate_has_price": {
-			      "Binding": {
-			        "ConceptualEntity": "monthly_usdt_exchange_rate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "monthly_usdt_exchange_rate": {
-			          "Target": {
-			            "Entity": "monthly_usdt_exchange_rate"
-			          }
-			        },
-			        "monthly_usdt_exchange_rate.price": {
-			          "Target": {
-			            "Entity": "monthly_usdt_exchange_rate.price"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "monthly_usdt_exchange_rate"
-			            },
-			            "Object": {
-			              "Role": "monthly_usdt_exchange_rate.price"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "monthly_usdt_exchange_rates_have_prices"
-			        },
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "monthly_usdt_exchange_rate"
-			            },
-			            "Adjectives": [
-			              {
-			                "expensive": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "cheap": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "monthly_usdt_exchange_rate.price"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "price_indicates_how_expensive_monthly_usdt_exchange_rates_are"
-			        }
-			      ]
-			    },
-			    "monthly_usdt_exchange_rate_has_yyyymm": {
-			      "Binding": {
-			        "ConceptualEntity": "monthly_usdt_exchange_rate"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "monthly_usdt_exchange_rate": {
-			          "Target": {
-			            "Entity": "monthly_usdt_exchange_rate"
-			          }
-			        },
-			        "monthly_usdt_exchange_rate.yyyymm": {
-			          "Target": {
-			            "Entity": "monthly_usdt_exchange_rate.yyyymm"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "monthly_usdt_exchange_rate"
-			            },
-			            "Object": {
-			              "Role": "monthly_usdt_exchange_rate.yyyymm"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "monthly_usdt_exchange_rates_have_yyyymms"
-			        }
-			      ]
-			    },
 			    "daily_usdt_exchange_rate_has_price": {
 			      "Binding": {
 			        "ConceptualEntity": "daily_usdt_exchange_rate"
@@ -6852,39 +7633,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "official_price_histories_have_yyyymms"
-			        }
-			      ]
-			    },
-			    "calendar_start_of_week_date_hierarchy_has_calendar_start_of_week_day": {
-			      "Binding": {
-			        "ConceptualEntity": "calendar"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "calendar.start_of_week.date_hierarchy": {
-			          "Target": {
-			            "Entity": "calendar.start_of_week.date_hierarchy"
-			          }
-			        },
-			        "calendar.start_of_week.day": {
-			          "Target": {
-			            "Entity": "calendar.start_of_week.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "calendar.start_of_week.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "calendar.start_of_week.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "start_of_week_date_hierarchy_have_start_of_week_day"
 			        }
 			      ]
 			    },

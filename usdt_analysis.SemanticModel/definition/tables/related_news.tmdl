@@ -129,20 +129,20 @@ table related_news
 				    Source = Excel.Workbook(File.Contents("Z:\Code\07_usdc_analyzer\data\all_news.xlsx"), null, true),
 				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"title", type text}}),
-				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"date", type date}}, "es-419"),
-				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type with Locale",{{"link", type text}, {"provider", type text}}),
-				    #"Filtered Rows" = Table.SelectRows(#"Changed Type1", each [title] <> null and [title] <> ""),
-				    #"Merged Queries" = Table.NestedJoin(#"Filtered Rows", {"title"}, llm_analysis, {"title"}, "llm_analysis", JoinKind.LeftOuter),
+				    #"Initial Type Def" = Table.TransformColumnTypes(#"Promoted Headers",{{"title", type text}, {"link", type text}, {"provider", type text}}),
+				    #"Date Type ES format" = Table.TransformColumnTypes(#"Initial Type Def", {{"date", type date}}, "es-419"),
+				    #"Removed Empty Titles" = Table.SelectRows(#"Date Type ES format", each [title] <> null and [title] <> ""),
+				    #"Merged Queries" = Table.NestedJoin(#"Removed Empty Titles", {"title"}, llm_analysis, {"title"}, "llm_analysis", JoinKind.LeftOuter),
 				    #"Expanded llm_analysis" = Table.ExpandTableColumn(#"Merged Queries", "llm_analysis", {"title", "res.entidades", "res.partidos_politicos", "res.temas", "res.impacto_dolar", "res.impacto_economia", "res.impacto_politico"}, {"llm_analysis.title", "llm_analysis.res.entidades", "llm_analysis.res.partidos_politicos", "llm_analysis.res.temas", "llm_analysis.res.impacto_dolar", "llm_analysis.res.impacto_economia", "llm_analysis.res.impacto_politico"}),
-				    #"Added Custom" = Table.AddColumn(#"Expanded llm_analysis", "YYYYMMDD", each Date.ToText([date], [Format="yyyyMMdd"])),
-				    #"Changed Type2" = Table.TransformColumnTypes(#"Added Custom",{{"YYYYMMDD", Int64.Type}}),
-				    #"Added Custom1" = Table.AddColumn(#"Changed Type2", "analyzed_by_llm", each if [llm_analysis.title] <> "" and [llm_analysis.title] <> null then "SI" else "NO"),
-				    #"Changed Type3" = Table.TransformColumnTypes(#"Added Custom1",{{"analyzed_by_llm", type text}}),
-				    #"Invoked Custom Function" = Table.AddColumn(#"Changed Type3", "clean_title", each text_cleaning([title])),
-				    #"Changed Type4" = Table.TransformColumnTypes(#"Invoked Custom Function",{{"clean_title", type text}})
+				    #"Removed Duplicates" = Table.Distinct(#"Expanded llm_analysis", {"title"}),
+				    #"Added YYYYMMDD" = Table.AddColumn(#"Removed Duplicates", "YYYYMMDD", each Date.ToText([date], [Format="yyyyMMdd"])),
+				    #"Changed Type to Whole" = Table.TransformColumnTypes(#"Added YYYYMMDD",{{"YYYYMMDD", Int64.Type}}),
+				    #"Added Flag for LLM" = Table.AddColumn(#"Changed Type to Whole", "analyzed_by_llm", each if [llm_analysis.title] <> "" and [llm_analysis.title] <> null then "SI" else "NO"),
+				    #"Changed Type Flag" = Table.TransformColumnTypes(#"Added Flag for LLM",{{"analyzed_by_llm", type text}}),
+				    #"Invoked Clean Text Column" = Table.AddColumn(#"Changed Type Flag", "clean_title", each text_cleaning([title])),
+				    #"Changed Type to Text" = Table.TransformColumnTypes(#"Invoked Clean Text Column",{{"clean_title", type text}})
 				in
-				    #"Changed Type4"
+				    #"Changed Type to Text"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -57,9 +57,10 @@ expression llm_analysis = ```
 		        type list}}
 		    ),
 		    #"Extracted impacto_politico" = Table.TransformColumns(#"Parse impacto_politico", {"res.impacto_politico", each Text.Combine(List.Transform(_, Text.From), ","), type text}),
-		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Extracted impacto_politico", {"res.partidos_politicos"})
+		    #"Removed Errors" = Table.RemoveRowsWithErrors(#"Extracted impacto_politico", {"res.partidos_politicos"}),
+		    #"Removed Duplicates" = Table.Distinct(#"Removed Errors", {"title"})
 		in
-		    #"Removed Errors"
+		    #"Removed Duplicates"
 		```
 	lineageTag: d51fb00c-e579-4e0c-8636-b322e9e93ac2
 	queryGroup: aux_tables
@@ -74,16 +75,25 @@ expression text_cleaning = ```
 		        {"y","o","u","e","ni","que","pero","sino","aunque","si","porque",
 		         "para","por","con","sin","a","al","del","de","en","entre","sobre",
 		         "el","la","los","las","un","una","unos","unas","lo","le","les",
-		         "su","sus","mi","mis","tu","tus"},
+		         "su","sus","mi","mis","tu","tus", "no", "es", "ya", "hay", "debe",
+		         "este", "fue", "tiene", "mil", "bs", "us", "ve", "solo", "hasta", "tras",
+		         "ser", "dice", "se", "como", "más"},
 		    
-		    limpiar =                      // función reutilizable
+		    limpiar =
 		        (txt as nullable text) as text =>
 		            let
-		                palabras   = Text.Split(Text.Lower(Text.Remove(txt,{"?",".",",",";","¡","!","¿",":","\"}))," "),
+		                palabras   = Text.Split(
+		                    Text.Lower(Text.Remove(txt,{"?",".",",",";","¡","!","¿",":","\"})), " "
+		                    ),
 		                filtradas  = List.Select(palabras,
 		                                each _ <> "" and not List.Contains(stopWords, _)),
-		                salida     = Text.Combine(filtradas," ")
-		            in  salida
+		                salida     = Text.Combine(filtradas," "),
+		                limpieza   = Text.Select(salida, List.Combine({
+		                    {"a".."z"},                     // alfabeto latino básico
+		                    {"á","é","í","ó","ú","ü","ñ"},  // tilde/diéresis
+		                    {" "}                           // espacio
+		                }))
+		            in  limpieza
 		in
 		    limpiar
 		```

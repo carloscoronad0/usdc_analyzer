@@ -1,11 +1,75 @@
 table metrics
 	lineageTag: f3bc28dd-614f-47cf-9b26-8bf7f4fc3c21
 
+	measure TOP_Y_NEWS_COUNT =
+			
+			MAXX(
+			    SUMMARIZE(
+			        related_news,
+			        'calendar'[YYYYMM],
+			        'calendar'[Week of Month],
+			        "_count", COUNT(related_news[link])
+			    ),
+			    [_count]
+			)
+		formatString: 0
+		lineageTag: 97383713-ff8d-4624-80d9-63f51860c32a
+
+	measure PRICE_ON_INITIAL_DATE =
+			
+			VAR min_date = MIN(daily_usdt_exchange_rate[YYYYMMDD])
+			RETURN
+			CALCULATE(
+			    MAX(daily_usdt_exchange_rate[prices]),
+			    daily_usdt_exchange_rate[YYYYMMDD] = min_date
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 5d423f72-75c8-4144-b7a7-cad57e66bf98
+
+	measure PRICE_ON_FINAL_DATE =
+			
+			VAR max_date = MAX(daily_usdt_exchange_rate[YYYYMMDD])
+			RETURN
+			CALCULATE(
+			    MAX(daily_usdt_exchange_rate[prices]),
+			    daily_usdt_exchange_rate[YYYYMMDD] = max_date
+			)
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: afd82592-d4ef-4e12-8c39-8b8dc201d69d
+
+	measure PRICE_SPREAD = DIVIDE([PRICE_ON_FINAL_DATE] - [PRICE_ON_INITIAL_DATE], [PRICE_ON_INITIAL_DATE], 0)
+		lineageTag: b34984cb-28c8-4fe7-b571-af105e0b773b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure PRICE_SPREAD_COLOR =
+			
+			SWITCH(
+			    TRUE(),
+			    [PRICE_SPREAD] > 0.05, "#B33553",
+			    [PRICE_SPREAD] < -0.05, "#2EC4B6",
+			    "#FFD07B"
+			)
+		lineageTag: 28d3e543-3989-4bd1-a366-c670749af053
+
+	measure PRICE_SPREAD_FORMAT =
+			
+			SWITCH(
+			    TRUE(),
+			    [PRICE_SPREAD] > 0, CONCATENATE(UNICHAR(9650), FORMAT([PRICE_SPREAD], "0.0%")),
+			    [PRICE_SPREAD] < 0, CONCATENATE(UNICHAR(9660), FORMAT([PRICE_SPREAD], "0.0%")),
+			    ""
+			)
+		lineageTag: 4a512117-550a-4591-9592-e2056a029d7e
+
 	column metrics
 		dataType: string
+		isHidden
 		lineageTag: f76b8bce-c866-4d49-bb04-3e9e28b54814
 		summarizeBy: none
 		sourceColumn: metrics
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

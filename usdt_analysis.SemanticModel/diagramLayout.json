@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 414,
-            "y": 387.23005624732792
+            "x": 490.38888888888891,
+            "y": 328.89672291399455
           },
           "nodeIndex": "calendar",
           "nodeLineageTag": "a0aadf48-e0ea-4234-b450-9e33dd3dfe3e",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 299.649052242377,
-            "y": 113
+            "x": 49.371274464599196,
+            "y": 688.66666666666674
           },
           "nodeIndex": "daily_usdt_exchange_rate",
           "nodeLineageTag": "6155addb-0b3b-4ef6-9708-22fe2887907b",
@@ -36,21 +36,8 @@
         },
         {
           "location": {
-            "x": 740.60619718896623,
-            "y": 214
-          },
-          "nodeIndex": "monthly_usdt_exchange_rate",
-          "nodeLineageTag": "67211bf2-d0d9-4a64-a842-102218aac4b3",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 750.72656551762839,
-            "y": 460.61525992031966
+            "x": 825.17100996207284,
+            "y": 874.00414880920857
           },
           "nodeIndex": "official_price_history",
           "nodeLineageTag": "a782a245-bea3-4fda-8acb-f4953d572543",
@@ -75,8 +62,8 @@
         },
         {
           "location": {
-            "x": 48.726565517628387,
-            "y": 293.61502812366393
+            "x": 992.50434329540622,
+            "y": 320.50391701255279
           },
           "nodeIndex": "related_news",
           "nodeLineageTag": "57bfad4f-852e-4afa-9df6-5843a69b056a",
@@ -85,10 +72,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 940.782121073184,
+            "y": 2.777777777777775
+          },
+          "nodeIndex": "word_count",
+          "nodeLineageTag": "c8e7507d-722b-4c70-9b2e-3b5445672ac7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 72,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

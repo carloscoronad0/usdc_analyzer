@@ -23,11 +23,6 @@ relationship AutoDetected_8d58af3c-aef5-4fc2-89c0-dc8b24a0f29c
 	fromColumn: calendar.YYYYMM
 	toColumn: official_price_history.YYYYMM
 
-relationship b89b7181-604b-c164-645e-fd9fb68f80e9
-	crossFilteringBehavior: bothDirections
-	fromColumn: calendar.YYYYMM
-	toColumn: monthly_usdt_exchange_rate.YYYYMM
-
 relationship 62b601c8-42be-0689-908b-5bd120daee5c
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
@@ -42,4 +37,9 @@ relationship f0b20dde-d10a-4fae-bdfa-e2af49b505af
 relationship AutoDetected_a8491550-9cf1-43dc-a298-d676bebd71fc
 	fromColumn: related_news.YYYYMMDD
 	toColumn: calendar.YYYYMMDD
+
+relationship AutoDetected_9c843972-3f3a-4d92-8c88-c75071146b98
+	crossFilteringBehavior: bothDirections
+	fromColumn: word_count.link
+	toColumn: related_news.link
 

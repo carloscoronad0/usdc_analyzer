@@ -10,17 +10,16 @@ queryGroup aux_tables
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["official_price_history","daily_usdt_exchange_rate","monthly_usdt_exchange_rate","aux_month_numbers","llm_analysis","text_cleaning","calendar","related_news","metrics"]
+annotation PBI_QueryOrder = ["official_price_history","daily_usdt_exchange_rate","aux_month_numbers","llm_analysis","text_cleaning","calendar","related_news","word_count","metrics"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBIDesktopVersion = 2.143.1378.0 (25.05)+4e1de9c957866bc5336e0d250838314aa54ff3a8
+annotation PBIDesktopVersion = 2.144.679.0 (25.06)+ef40146207b86a826d1c72a7727a743ee37450e9
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table official_price_history
 ref table daily_usdt_exchange_rate
-ref table monthly_usdt_exchange_rate
 ref table calendar
 ref table DateTableTemplate_926adfe8-2041-4606-8f71-272aeaa7fafe
 ref table LocalDateTable_446f9230-5d24-4b82-9da3-41edb1ff396a
@@ -30,6 +29,7 @@ ref table LocalDateTable_f3c53213-6751-4d96-bec9-b105d1d39da0
 ref table metrics
 ref table related_news
 ref table LocalDateTable_a990e72e-f3fb-40de-b912-6ea7d3f953d6
+ref table word_count
 
 ref cultureInfo en-US
 
