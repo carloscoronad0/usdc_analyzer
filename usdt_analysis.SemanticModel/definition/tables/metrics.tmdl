@@ -62,6 +62,15 @@ table metrics
 			)
 		lineageTag: 4a512117-550a-4591-9592-e2056a029d7e
 
+	measure DYNAMIC_LINK =
+			
+			IF(
+			    ISFILTERED(related_news[title]),
+			    MAX(related_news[link]),
+			    ""
+			)
+		lineageTag: 0e7746b5-46aa-4a74-9a22-ba91807b4f22
+
 	column metrics
 		dataType: string
 		isHidden

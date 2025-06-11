@@ -35,6 +35,7 @@ relationship f0b20dde-d10a-4fae-bdfa-e2af49b505af
 	toColumn: LocalDateTable_a990e72e-f3fb-40de-b912-6ea7d3f953d6.Date
 
 relationship AutoDetected_a8491550-9cf1-43dc-a298-d676bebd71fc
+	crossFilteringBehavior: bothDirections
 	fromColumn: related_news.YYYYMMDD
 	toColumn: calendar.YYYYMMDD
 
